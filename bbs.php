@@ -1,5 +1,5 @@
 <?php
-  include 'includes/login.php';
+  include 'includes/includes_login.php';
   // 1ページに表示されるコメントの数
   $num = 10;
   // データベースに接続
