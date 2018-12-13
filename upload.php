@@ -1,5 +1,5 @@
 <?php
-  include 'includes/login.php';
+  include 'includes/includes_login.php';
   $msg = null; // アップロード状況を表すメッセージ
 
   // アップロード処理
