@@ -1,5 +1,5 @@
 <?php
-  include 'includes/login.php';
+  include 'includes/includes_login.php';
   $fp = fopen("info-2.txt", "r"); // ファイルを開く
   $line = array(); // ファイル内容を1行1要素に格納する配列
   // ファイルが正しく開けたとき
