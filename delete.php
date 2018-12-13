@@ -1,5 +1,5 @@
 <?php
-  include 'includes/login.php';
+  include 'includes/includes_login.php';
   // データの受け取り
   $id = intval($_POST['id']);
   $pass = $_POST['pass'];
