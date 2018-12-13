@@ -1,5 +1,5 @@
 <?php
-  include 'includes/login.php';
+  include 'includes/includes_login.php';
   $fp = fopen("info-2.txt", "r"); // ファイルを開く
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
