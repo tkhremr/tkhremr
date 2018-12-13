@@ -1,11 +1,12 @@
 <?php
+  include 'includes/login.php';
   // データの受け取り
   $id = intval($_POST['id']);
   $pass = $_POST['pass'];
 
   // 必須項目チェック
   if ($id == '' || $pass == '') {
-    header('Location: mission_4.php'); // mission_4.phpへ移動
+    header('Location: bbs.php'); // bbs.phpへ移動
     exit(); // 終了
   }
 
@@ -21,7 +22,7 @@
     // 例外がスローされる設定にする
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // プリペアドステートメントを作成
-    $stmt = $pdo->prepare("DELETE FROM mission_4 WHERE id=:id AND pass=:pass");
+    $stmt = $pdo->prepare("DELETE FROM mission_6 WHERE id=:id AND pass=:pass");
     // パラメータを割り当て
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->bindParam(':pass', $pass, PDO::PARAM_STR);
@@ -30,7 +31,7 @@
   } catch (PDOException $e) {
     echo "エラー:" . $e->getMessage();
   }
-  //mission_4.phpに戻る
-  header('Location: mission_4.php');
+  // bbs.phpに戻る
+  header('Location: bbs.php');
   exit(); // 終了
 ?>
